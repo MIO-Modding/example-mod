@@ -11,7 +11,6 @@ x64/
 
 # Build artifacts
 *.obj
-*.lib
 *.exp
 *.pdb
 *.ilk
