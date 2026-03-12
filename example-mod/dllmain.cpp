@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include "mio-modding-api.h"
 
+char* modId;
+void LogMessage(const char* message) {
+    ModAPI::Util::LogMessage(modId, message);
+}
 DWORD ApplyWind(LPVOID lpParam) {
     float time = 1000. / 60.;
     while (true) {
@@ -21,7 +25,8 @@ DWORD ApplyWind(LPVOID lpParam) {
 
     return 0;
 }
-extern "C" __declspec(dllexport) void ModInit() {
+extern "C" __declspec(dllexport) void ModInit(char* id) {
+    modId = id;
     CreateThread(nullptr, 0, ApplyWind, nullptr, 0, nullptr);
 }
 BOOL APIENTRY DllMain(HMODULE hModule,
