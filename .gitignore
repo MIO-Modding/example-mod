@@ -36,6 +36,6 @@ header.txt
 obj/
 bin/
 
-!*/lib/MioBinds.dll
-!*/lib/MioModdingApi.dll
-!*/lib/MioModLoader.dll
+!lib/MioBinds.dll
+!lib/MioModdingApi.dll
+!lib/MioModLoader.dll
