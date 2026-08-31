@@ -33,7 +33,7 @@ namespace TestMod
 
         private unsafe void Fixed_update_Prefix(MioGame.Game* __this)
         {
-            var mio = __this->mio;
+            ref var mio = ref __this->mio;
             var str = Util.StringToMioString("TRINKET:SILLY");
             if (mio.has_trinket_equiped(&str))
             {
