@@ -1,8 +1,0 @@
-{
-    "id": "io.github.mio-modding.example-mod",
-    "name": "Example Mod",
-    "main": "example-mod.dll",
-    "dependencies": [
-        "io.github.mio-modding.mio-modding-api"
-    ]
-}
