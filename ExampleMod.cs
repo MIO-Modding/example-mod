@@ -34,8 +34,8 @@ namespace TestMod
         private unsafe void Fixed_update_Prefix(MioGame.Game* __this)
         {
             ref var mio = ref __this->mio;
-            var str = Util.StringToMioString("TRINKET:SILLY");
-            if (mio.has_trinket_equiped(&str))
+            MioGame.String* str = StringAllocator.GetMioString("TRINKET:SILLY");
+            if (mio.has_trinket_equiped(str))
             {
                 if (mio.node != null && !mio.cutscene.active && !mio.walk_bot.active && mio.hook.state._value == MioGame.Mio.Hook.State.Inactive)
                 {
